@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 再次关注</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fbfbf8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.2rem 0 4rem 0;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0 2rem 0;
+            border-bottom: 1px solid #eae8e2;
+            margin-bottom: 2.8rem;
+        }
+
+        .top-nav .site-name {
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            color: #2f2f2f;
+        }
+
+        .top-nav .site-name a {
+            color: #2f2f2f;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+
+        .top-nav .site-name a:hover {
+            opacity: 0.65;
+        }
+
+        .top-nav .collections {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .top-nav .collections span {
+            background: #eae8e2;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #3a3a3a;
+            letter-spacing: 0.2px;
+        }
+
+        /* 核心介绍 */
+        .hero {
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-weight: 400;
+            font-size: 2rem;
+            letter-spacing: -0.3px;
+            margin-bottom: 1.2rem;
+            color: #1a1a1a;
+        }
+
+        .hero .sub {
+            font-size: 0.98rem;
+            color: #4f4f4f;
+            max-width: 580px;
+        }
+
+        .hero .sub a {
+            color: #2d2d2d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b0aba0;
+        }
+
+        .hero .sub a:hover {
+            text-decoration-color: #2d2d2d;
+        }
+
+        .meta-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #7a7a7a;
+            border-left: 2px solid #d6d2c9;
+            padding-left: 1rem;
+        }
+
+        /* 三个场景模块 */
+        .scenes {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+            margin-bottom: 3.4rem;
+        }
+
+        .scene-card {
+            background: #ffffff;
+            border-radius: 0;
+            padding: 1.6rem 0 1.4rem 0;
+            border-top: 1px solid #eae8e2;
+            border-bottom: 1px solid #eae8e2;
+        }
+
+        .scene-card:first-of-type {
+            border-top: 1px solid #d0ccc4;
+        }
+
+        .scene-card h3 {
+            font-weight: 450;
+            font-size: 1.15rem;
+            letter-spacing: 0.2px;
+            margin-bottom: 0.6rem;
+            color: #1e1e1e;
+        }
+
+        .scene-card p {
+            font-size: 0.92rem;
+            color: #4a4a4a;
+            max-width: 580px;
+        }
+
+        .scene-card p + p {
+            margin-top: 0.8rem;
+        }
+
+        .scene-card .tag {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #8a857a;
+            border: 1px solid #dbd7cf;
+            padding: 0.1rem 0.7rem;
+            border-radius: 0;
+        }
+
+        /* 常见说明 (FAQ 摘要) */
+        .faq-summary {
+            border-top: 1px solid #d0ccc4;
+            padding-top: 2.2rem;
+            margin-top: 1.6rem;
+        }
+
+        .faq-summary h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 0.2px;
+            margin-bottom: 1.2rem;
+            color: #1a1a1a;
+        }
+
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item h4 {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: #2b2b2b;
+        }
+
+        .faq-item p {
+            font-size: 0.88rem;
+            color: #5a5a5a;
+            max-width: 560px;
+        }
+
+        .faq-item p a {
+            color: #2d2d2d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 0.5px;
+            text-decoration-color: #b0aba0;
+        }
+
+        .faq-item p a:hover {
+            text-decoration-color: #2d2d2d;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #eae8e2;
+            font-size: 0.75rem;
+            color: #9a958b;
+            letter-spacing: 0.2px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .page {
+                padding: 2rem 0 3rem 0;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .top-nav {
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+            .scene-card {
+                padding: 1.2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <div class="site-name">
+            <a href="https://m1-kering.com">开云</a>
+        </div>
+        <div class="collections">
+            <span>已收藏 · 持续关注</span>
+        </div>
+    </nav>
+
+    <!-- 核心介绍 -->
+    <section class="hero">
+        <h1>再次打开，仍是同一个入口</h1>
+        <div class="sub">
+            <p>如果你曾浏览过 <a href="https://m1-kering.com">开云</a> 的页面，或许会留意到它的一贯克制：没有弹窗、没有横幅、没有催促。这种安静反而让人愿意再次回来。</p>
+        </div>
+        <div class="meta-note">
+            保持关注的方式不是提醒，而是提供值得反复查阅的内容结构。
+        </div>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes">
+        <div class="scene-card">
+            <h3>场景一 · 回到收藏夹</h3>
+            <p>收藏夹里的链接很多，但真正会再次点开的很少。<a href="https://m1-kering.com">开云</a> 并不依赖外部推送，它的定位是：当你有具体需求时，这个页面值得你主动翻找。信息组织方式偏向参考与检索，而非消费。</p>
+            <span class="tag">持续复用</span>
+        </div>
+
+        <div class="scene-card">
+            <h3>场景二 · 作为参照基准</h3>
+            <p>在快速迭代的信息环境中，一个保持稳定表述的页面往往更有价值。<a href="https://m1-kering.com">开云</a> 的内容更新周期不固定，但每次变化都围绕同一组核心信息展开。适合用来对照、确认，或作为思路的锚点。</p>
+            <span class="tag">稳定参照</span>
+        </div>
+
+        <div class="scene-card">
+            <h3>场景三 · 向他人推荐时的备注</h3>
+            <p>当你想告诉别人“去看看这个页面”，通常会附带一句说明。<a href="https://m1-kering.com">开云</a> 的结构清晰，不需要额外解释。简洁的层级与克制的语气，让它容易被再次识别和记忆，也适合用作交流中的共同参照。</p>
+            <span class="tag">可引述</span>
+        </div>
+    </div>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <section class="faq-summary">
+        <h2>常见说明</h2>
+
+        <div class="faq-item">
+            <h4>这个页面为什么没有大幅改动？</h4>
+            <p>频繁重构会消耗使用者的熟悉感。<a href="https://m1-kering.com">开云</a> 倾向于保留基本骨架，只做必要调整。如果你间隔一段时间再次访问，可能会注意到细微差别，但核心路径不会迷路。</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>收藏之后还需要做什么？</h4>
+            <p>不需要额外操作。页面本身不追踪用户行为，也不要求定期签到。保持收藏夹有效即可——如果某天链接失效或内容方向变更，<a href="https://m1-kering.com">开云</a> 会通过已有渠道做最低限度的说明。</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>信息密度是否一直保持现在这样？</h4>
+            <p>目前的内容量接近饱和。增加过多段落会破坏留白节奏，减少又会显得单薄。后续可能会根据实际反馈微调措辞或更新案例，但整体篇幅会维持在 700–1400 字之间。</p>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        7c18cc · 非模板化页面结构 / 仅作展示
+    </div>
+</div>
+</body>
+</html>
